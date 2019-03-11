@@ -863,8 +863,50 @@ $(function() {
     }
 
     filterMarkers = function (category) {
-      map.panTo(new google.maps.LatLng(60.165621, 30.195523));
-      map.setZoom(14);
+      if (category === "gym") {
+          map.panTo(new google.maps.LatLng(60.110203, 30.283680));
+          map.setZoom(12);
+        }
+      if (category === "bycicle") {
+          map.panTo(new google.maps.LatLng(60.099132, 30.260556));
+          map.setZoom(12);
+        }
+      if (category === "workout") {
+          map.panTo(new google.maps.LatLng(60.152311, 30.209259));
+          map.setZoom(14);
+        }
+      if (category === "snowboard") {
+          map.panTo(new google.maps.LatLng(60.127922, 30.445242));
+          map.setZoom(12);
+        }
+      if (category === "fun") {
+          map.panTo(new google.maps.LatLng(60.109117, 30.265705));
+          map.setZoom(12);
+        }
+      if (category === "horse") {
+          map.panTo(new google.maps.LatLng(60.140239, 30.302356));
+          map.setZoom(13);
+        }
+      if (category === "spa") {
+          map.panTo(new google.maps.LatLng(60.140239, 30.302356));
+          map.setZoom(12);
+        }
+      if (category === "healthfood") {
+          map.panTo(new google.maps.LatLng(60.095585, 30.280165));
+          map.setZoom(13);
+        }
+      if (category === "park") {
+          map.panTo(new google.maps.LatLng(60.171869, 30.200826));
+          map.setZoom(13);
+        }
+      if (category === "ski") {
+          map.panTo(new google.maps.LatLng(60.057593, 30.305522));
+          map.setZoom(14);
+        }
+      if (category == "") {
+            map.setZoom(12);
+      }
+
         gmarkers1.map((marker) => {
             if (marker.category == category || category.length === 0 || marker.category == "logo") {
                 marker.setVisible(true);
